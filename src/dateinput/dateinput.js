@@ -420,12 +420,12 @@
 				
 				// month selector
 				monthSelector.unbind("change").change(function() {
-					self.setValue(yearSelector.val(), $(this).val());		
+					self.setValue(parseInt(yearSelector.val()), parseInt($(this).val()));		
 				});
 				
 				// year selector
 				yearSelector.unbind("change").change(function() {
-					self.setValue($(this).val(), monthSelector.val());		
+					self.setValue(parseInt($(this).val()), parseInt(monthSelector.val()));		
 				});
 				
 				// prev / next month
