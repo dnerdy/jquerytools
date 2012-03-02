@@ -580,16 +580,25 @@
 						// today
 						} else if (isSameDay(now, date)) {
 							a.attr("id", css.today);
-						}	 
+						}
+
+						// disabled
+						if (min && date < min) {
+							pm.addClass(css.disabled);						
+						}
+						
+						if (max && date > max) {
+							nm.addClass(css.disabled);						
+						}
 					}
-					
+
 					// disabled
 					if (min && date < min) {
-						a.add(pm).addClass(css.disabled);						
+						a.addClass(css.disabled);						
 					}
 					
 					if (max && date > max) {
-						a.add(nm).addClass(css.disabled);						
+						a.addClass(css.disabled);						
 					}
 					
 					a.attr("href", "#" + num).text(num).data("date", date);					
