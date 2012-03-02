@@ -198,7 +198,7 @@
 		value = parseDate(value) || now;  
 		
 		min   = parseDate(min || new Date(yearNow + conf.yearRange[0], 1, 1));
-		max   = parseDate(max || new Date( yearNow + conf.yearRange[1]+ 1, 1, -1));
+		max   = parseDate(max || new Date(yearNow + conf.yearRange[1], 11, 31));
 		
 		
 		// check that language exists
